@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %} 
+    <div class="container" style="width: 50%;">
+       <!-- 
+          <div class="mb-3">
+            <label for="nickname" class="form-label">Nickname</label>
+            <input type="text" class="form-control" id="nickname" name="nickname">
+          </div> 
+        -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <input type="text" class="form-control" id="message" name="message">
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: deeppink; border-color: deeppink;">Send Tweet</button>
+  </div>
+  </form>
+{% endblock  %}
+
+
+<!-- Cross Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions 
+    on web application in which they're currently authenticated. With a little help of social engineering (such as sending a link 
+    via email or chat ), an attacker may trick the users of a web application into executing actions of the attacker's choosing. -->
